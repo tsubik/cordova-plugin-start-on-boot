@@ -18,3 +18,9 @@ cordova platform add android
 ```
 
 Or mannually update StartAppAtBootReceiver.java in /platforms/android/src/com/tsubik/cordova/plugin/start-on-boot
+
+## Removing the Plugin from your project
+
+```
+cordova plugin rm com.tsubik.cordova.plugin.start-on-boot
+```
