@@ -13,8 +13,19 @@
 
     <!-- android -->
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="Echo" value="com.tsubik.cordova.plugin.start-on-boot" />
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <receiver
+                android:name="com.tsubik.cordova.plugin.StartAppAtBootReceiver">
+                <intent-filter>
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+                </intent-filter>
+            </receiver>
+
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
         </config-file>
 
         <source-file src="src/android/StartAppAtBootReceiver.java" target-dir="src/com/tsubik/cordova/plugin/start-on-boot" />

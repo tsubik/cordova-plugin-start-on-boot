@@ -1,4 +1,4 @@
-package com.tsubik.plugin;
+package com.tsubik.cordova.plugin;
  
 import android.content.Intent;
 import android.net.Uri;
@@ -10,7 +10,7 @@ public class StartAppAtBootReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-            Intent serviceIntent = new Intent(context, EnterYourMainActivityName.class);
+            Intent serviceIntent = new Intent(context, YOURPACKAGENAME.EnterYourMainActivityName.class);
             serviceIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(serviceIntent);
     }
