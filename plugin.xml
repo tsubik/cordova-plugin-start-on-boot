@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="com.tsubik.cordova.plugin.start-on-boot" version="1.0.0">
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="com.tsubik.cordova.start_on_boot" version="1.0.1">
 
     <name>Start App on Boot</name>
 
@@ -16,7 +16,7 @@
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <receiver
-                android:name="com.tsubik.cordova.plugin.StartAppAtBootReceiver">
+                android:name="com.tsubik.cordova.start_on_boot.StartOnBootReceiver">
                 <intent-filter>
                     <action android:name="android.intent.action.BOOT_COMPLETED" />
                 </intent-filter>
@@ -28,7 +28,7 @@
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
         </config-file>
 
-        <source-file src="src/android/StartAppAtBootReceiver.java" target-dir="src/com/tsubik/cordova/plugin/start-on-boot" />
+        <source-file src="src/android/StartOnBootReceiver.java" target-dir="src/com/tsubik/cordova/start_on_boot" />
     </platform>
 
 </plugin>
