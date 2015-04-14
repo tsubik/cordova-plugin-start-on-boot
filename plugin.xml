@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="com.tsubik.cordova.start_on_boot" version="1.0.1">
-
     <name>Start App on Boot</name>
+    <description>Start App on Boot plugin</description>
+    <license>MIT</license>
+    <keywords>phonegap, startup</keywords>
+    <repo>https://github.com/tsubik/cordova-plugin-start-on-boot.git</repo>
+    <issue>https://github.com/tsubik/cordova-plugin-start-on-boot/issues</issue>
 
     <description>
         Starting application on device boot completed
@@ -21,7 +25,6 @@
                     <action android:name="android.intent.action.BOOT_COMPLETED" />
                 </intent-filter>
             </receiver>
-
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
@@ -30,5 +33,4 @@
 
         <source-file src="src/android/StartOnBootReceiver.java" target-dir="src/com/tsubik/cordova/start_on_boot" />
     </platform>
-
 </plugin>
