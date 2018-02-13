@@ -19,10 +19,10 @@
     <platform name="android">
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <receiver
-                android:name="com.tsubik.cordova.start_on_boot.StartOnBootReceiver">
-                <intent-filter>
+            <receiver android:name="com.tsubik.cordova.start_on_boot.StartOnBootReceiver" android:enabled="true" android:exported="true">
+                <intent-filter android:priority="999">
                     <action android:name="android.intent.action.BOOT_COMPLETED" />
+					<action android:name="android.intent.action.QUICKBOOT_POWERON" />
                 </intent-filter>
             </receiver>
         </config-file>
