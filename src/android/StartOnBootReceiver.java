@@ -19,6 +19,10 @@ public class StartOnBootReceiver extends BroadcastReceiver {
             String mainActivityName = getMainActivityName(context);
             Intent serviceIntent = new Intent(context, Class.forName(mainActivityName));
             serviceIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            //You can use the following plugin to read the extra:
+            //Check this example:
+            //https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent#example-4
+            serviceIntent.putExtra("StartedOnBoot", "1");
             Log.d(TAG, "Starting " + mainActivityName + " on boot");
             context.startActivity(serviceIntent);
         } catch(Exception ex) {
@@ -29,7 +33,6 @@ public class StartOnBootReceiver extends BroadcastReceiver {
     private String getMainActivityName (Context context) {
         try {
             PackageManager pm = context.getPackageManager();
-
             ActivityInfo[] activities = pm.getPackageInfo(context.getPackageName(), PackageManager.GET_ACTIVITIES).activities;
             if (activities.length > 0) {
                 return activities[0].name;
