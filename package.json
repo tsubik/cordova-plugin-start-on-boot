@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-start-on-boot",
+  "version": "1.0.2",
+  "description": "Starting application on device boot completed.",
+  "cordova": {
+    "id": "cordova-plugin-start-on-boot",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsubik/cordova-plugin-start-on-boot.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=2.7.0"
+    }
+  ],
+  "author": "Tomasz Subik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsubik/cordova-plugin-start-on-boot/issues"
+  },
+  "homepage": "https://github.com/tsubik/cordova-plugin-start-on-boot"
+}
